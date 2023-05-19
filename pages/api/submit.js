@@ -1,4 +1,4 @@
-import { db } from "../../firebase/config";
+import { DB } from "../../firebase/config";
 import { addDoc, collection } from "firebase/firestore";
 
 export default async function handler(req, res) {
@@ -13,8 +13,7 @@ export default async function handler(req, res) {
 
     try {
       // Save the input to Firestore database
-      console.log("Db: ", db);
-      await addDoc(collection(db, "productLinks"), {
+      await addDoc(collection(DB, "productLinks"), {
         productLink: input,
         store: "Amzaon",
       });

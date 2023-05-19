@@ -9,6 +9,4 @@ const app = initializeApp(FIREBASE_API);
 // Initalize Firesore
 const db = getFirestore(app);
 
-module.exports = {
-  db,
-};
+export const DB = db;
