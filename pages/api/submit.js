@@ -13,6 +13,7 @@ export default async function handler(req, res) {
 
     try {
       // Save the input to Firestore database
+      console.log("Db: ", db);
       await addDoc(collection(db, "productLinks"), {
         productLink: input,
         store: "Amzaon",
